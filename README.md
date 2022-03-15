@@ -21,3 +21,25 @@ For instance:
 <code>findDuplicates(asList(-1,1,3,2,2,2,5,6,-1,3,6),2);</code>
 
 should return "-1, 3 and 6" because these values ​​are repeated "numberOfDuplicates = 2" times, but not "2" which is repeated 3 times.
+
+<h1>4. IntegerSum</h1>
+
+You need to implement the integerSum method (in the ListOperation class) that should return the sum of integer values ​​from a list of strings.
+
+For instance:
+
+<code>integerSum(Arrays.asList("1 is greater than -1","today is April 1, 2021"));</code>
+
+must return
+
+<code>2022</code>
+
+<h1>5. FindMax</h1>
+
+You need to implement the getThreeMaximum method (in the FindTheMaximumElements class) that should return the maximum 3 BigDecimal values ​​from a list of strings.
+
+For instance:
+
+<code>getThreeMaximum(Arrays.asList("2","15","654","11","94","-200","89","-1","0"));</code>
+
+should return 89, 94, 654 - a list of BigDecimal values
