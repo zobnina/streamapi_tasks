@@ -43,3 +43,27 @@ For instance:
 <code>getThreeMaximum(Arrays.asList("2","15","654","11","94","-200","89","-1","0"));</code>
 
 should return 89, 94, 654 - a list of BigDecimal values
+
+<h1>6. Even-Odd</h1>
+
+You need to implement the findFromCollection method (in the EvenAndOddFinder class) that takes a List<Set<String>> input, which should return a Map<CharacterType, Set<String>> - Map with distributed sets consisting of even and odd character strings.
+
+Where:
+
+CharacterType is an enumeration of two elements, even (EVEN) and odd (ODD)
+
+For instance:
+
+<code>
+Set<String> set1 = initialization ...;
+</code><br/>
+<code>
+Set<String> set2 = initialization ...;
+</code><br/>
+<code>
+findFromCollection(Arrays.asList(set1, set2));
+</code>
+
+must return
+
+{ODD=[set of lines with an odd number of characters], EVEN=[set of lines with an even number of characters]}
