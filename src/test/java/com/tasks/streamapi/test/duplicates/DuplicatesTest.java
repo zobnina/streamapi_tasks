@@ -12,9 +12,14 @@ import static org.junit.Assert.assertEquals;
 
 public class DuplicatesTest {
 
+    private final Duplicates duplicates;
+
+    public DuplicatesTest() {
+        duplicates = new Duplicates();
+    }
+
     @Test
     public void shouldReturnListWithRepeatedTwoValues() {
-        Duplicates duplicates = new Duplicates();
 
         List<Integer> result = duplicates.findDuplicates(asList(-1, 1, 3, 2, 5, 6, -1, 3, 6), 2);
 
@@ -23,7 +28,6 @@ public class DuplicatesTest {
 
     @Test
     public void nullValuesShouldBeOmitted() {
-        Duplicates duplicates = new Duplicates();
 
         List<Integer> result = duplicates.findDuplicates(asList(1, 1, null, 2, 5, 6, 1, 3, 6, null), 2);
 
@@ -32,7 +36,6 @@ public class DuplicatesTest {
 
     @Test
     public void shouldReturnListWithRepeatedFourTimes() {
-        Duplicates duplicates = new Duplicates();
 
         List<Integer> result = duplicates.findDuplicates(asList(-1, 1, 3, 2, 5, 6, 3, -1, 3, 6, 3), 4);
 
@@ -41,7 +44,6 @@ public class DuplicatesTest {
 
     @Test
     public void shouldReturnListWithRepeatedValuesThreeTimes() {
-        Duplicates duplicates = new Duplicates();
 
         List<Integer> result = duplicates.findDuplicates(asList(-1, 6, 1, 3, 2, -1, 5, 6, -1, 3, 6), 3);
 
@@ -50,7 +52,6 @@ public class DuplicatesTest {
 
     @Test
     public void shouldReturnEmptyList() {
-        Duplicates duplicates = new Duplicates();
 
         List<Integer> result = duplicates.findDuplicates(null, 2);
 
