@@ -12,3 +12,12 @@ For example:
 The method returns list of the customers whose monthly total order sum is the largest 
 * only the given year should be considered 
 * the list should include only the given number of customers
+
+<h1>3. Duplicates</h1>
+
+Implement the findDuplicates method, which should return a list of values ​​that repeat numberOfDuplicates times.
+For instance:
+
+<code>findDuplicates(asList(-1,1,3,2,2,2,5,6,-1,3,6),2);</code>
+
+should return "-1, 3 and 6" because these values ​​are repeated "numberOfDuplicates = 2" times, but not "2" which is repeated 3 times.
