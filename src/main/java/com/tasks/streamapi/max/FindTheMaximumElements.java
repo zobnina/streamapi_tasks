@@ -4,7 +4,9 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FindTheMaximumElements {
 
@@ -19,4 +21,13 @@ public class FindTheMaximumElements {
                 .collect(Collectors.toList());
     }
 
+    public static <T> void findMinMax(Stream<? extends T> stream,
+                                      Comparator<? super T> order,
+                                      BiConsumer<? super T, ? super T> minMaxConsumer) {
+
+        List<T> list = Optional.ofNullable(stream).orElse(Stream.empty()).collect(Collectors.toList());
+        T min = list.stream().min(order).orElse(null);
+        T max = list.stream().max(order).orElse(null);
+        minMaxConsumer.accept(min, max);
+    }
 }
